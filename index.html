@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Sasidhar Malleboena - Software & Machine Learning Engineer" />
+  <title>Sasidhar M. — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts/theme-toggle.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- Navigation / Theme Toggle -->
+  <nav class="container flex justify-between items-center" style="padding-top: 20px; padding-bottom: 20px;">
+    <div style="font-weight: 700; font-size: 1.2rem;">SM.</div>
+    <button onclick="window.toggleTheme()" class="btn btn-secondary" aria-label="Toggle Dark Mode">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <main id="main" class="container">
+
+    <!-- Hero Section -->
+    <section id="hero" class="grid items-center mb-4" style="min-height: 80vh;">
+      <div class="col-span-6">
+        <h1 class="mb-4">Sasidhar Malleboena</h1>
+        <p class="sub" style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 1rem;">Aspiring Software &
+          Machine Learning Engineer</p>
+        <p class="mb-4" style="max-width: 50ch;">
+          Hands-on experience in Python, Java, SQL, Machine Learning, FastAPI, and IoT systems. Strong ability to build
+          real-world automation workflows, ML pipelines, and AI-powered embedded systems.
+        </p>
+        <div class="flex gap-2 mb-4">
+          <a href="/mnt/data/Sasidhar-Resume.pdf" download class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Resume
+          </a>
+          <a href="mailto:malleboenasasidhar@gmail.com" class="btn btn-secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Contact Me
+          </a>
+        </div>
+        <div class="flex gap-4" style="font-size: var(--text-sm); color: var(--text-secondary);">
+          <span>📍 Hyderabad, India</span>
+          <span>📞 +91 97048 89235</span>
+        </div>
+      </div>
+      <div class="col-span-6 flex justify-between" style="justify-content: center;">
+        <!-- Portrait/Stats Card -->
+        <div class="glass flex flex-col items-center justify-center text-center"
+          style="width: 320px; padding: 40px 20px;">
+          <div
+            style="width: 120px; height: 120px; border-radius: 50%; background: #ddd; margin-bottom: 20px; overflow: hidden;">
+            <!-- Placeholder Avatar -->
+            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="#999" stroke="none">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 4px;">Sasidhar M.</h3>
+          <p style="font-size: var(--text-xs); margin-bottom: 24px;">Software Engineer</p>
+
+          <div class="flex justify-between" style="width: 100%; padding: 0 10px;">
+            <div>
+              <strong style="display: block; font-size: 1.2rem; color: var(--accent-primary);">3+</strong>
+              <span style="font-size: var(--text-xs);">Projects</span>
+            </div>
+            <div>
+              <strong style="display: block; font-size: 1.2rem; color: var(--accent-secondary);">3</strong>
+              <span style="font-size: var(--text-xs);">Langs</span>
+            </div>
+            <div>
+              <strong style="display: block; font-size: 1.2rem; color: var(--text-primary);">8.7</strong>
+              <span style="font-size: var(--text-xs);">CGPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mb-4">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="col-span-4 glass" style="padding: 20px;">
+          <h3 style="margin-bottom: 12px; font-size: 1rem;">Programming</h3>
+          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">JavaScript (Node.js)</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="col-span-4 glass" style="padding: 20px;">
+          <h3 style="margin-bottom: 12px; font-size: 1rem;">Machine Learning</h3>
+          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
+            <span class="tag">scikit-learn</span>
+            <span class="tag">pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Feature Eng.</span>
+          </div>
+        </div>
+        <div class="col-span-4 glass" style="padding: 20px;">
+          <h3 style="margin-bottom: 12px; font-size: 1rem;">IoT & Embedded</h3>
+          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
+            <span class="tag">ESP8266</span>
+            <span class="tag">MQTT</span>
+            <span class="tag">Sensors</span>
+            <span class="tag">Serial Comm</span>
+          </div>
+        </div>
+        <div class="col-span-4 glass" style="padding: 20px;">
+          <h3 style="margin-bottom: 12px; font-size: 1rem;">Web & APIs</h3>
+          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
+            <span class="tag">FastAPI</span>
+            <span class="tag">REST</span>
+            <span class="tag">Webhooks</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="col-span-4 glass" style="padding: 20px;">
+          <h3 style="margin-bottom: 12px; font-size: 1rem;">Cloud & DB</h3>
+          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
+            <span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">FCM</span>
+          </div>
+        </div>
+        <div class="col-span-4 glass" style="padding: 20px;">
+          <h3 style="margin-bottom: 12px; font-size: 1rem;">Tools</h3>
+          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
+            <span class="tag">Git</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Jupyter</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="mb-4">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+
+        <!-- Project 1 -->
+        <article class="col-span-4 glass flex flex-col justify-between" style="padding: 24px;">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <h3 style="margin: 0; font-size: 1.1rem;">Fraud Detection Pipeline</h3>
+              <span class="tag" style="background: var(--accent-secondary); color: white; border: none;">Deployed</span>
+            </div>
+            <p style="font-size: var(--text-sm); margin-bottom: 16px;">
+              Autonomous pipeline that processes transaction data, extracts features, and flags high-risk activities
+              using ML models.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">ML</span>
+            </div>
+          </div>
+          <div class="flex gap-2 mt-4">
+            <a href="#" class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">View Repo</a>
+            <button class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">Case Study</button>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="col-span-4 glass flex flex-col justify-between" style="padding: 24px;">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <h3 style="margin: 0; font-size: 1.1rem;">Secure IoT Automation</h3>
+              <span class="tag" style="background: var(--accent-primary); color: white; border: none;">PoC</span>
+            </div>
+            <p style="font-size: var(--text-sm); margin-bottom: 16px;">
+              AI-enhanced home automation with secure MQTT and blockchain validation for voice/app commands.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="tag">IoT</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Firebase</span>
+            </div>
+          </div>
+          <div class="flex gap-2 mt-4">
+            <a href="#" class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">View Repo</a>
+            <button class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">Case Study</button>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="col-span-4 glass flex flex-col justify-between" style="padding: 24px;">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <h3 style="margin: 0; font-size: 1.1rem;">Smart Security System</h3>
+              <span class="tag" style="background: var(--text-tertiary); color: white; border: none;">Hardware</span>
+            </div>
+            <p style="font-size: var(--text-sm); margin-bottom: 16px;">
+              MFA system using Face Recognition, Voice, and PIN to unlock smart locks. Logs attempts to Firebase.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="tag">ESP8266</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">FCM</span>
+            </div>
+          </div>
+          <div class="flex gap-2 mt-4">
+            <a href="#" class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">View Repo</a>
+            <button class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">Case Study</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="mb-4">
+      <div class="grid">
+        <!-- Education Column -->
+        <div class="col-span-6">
+          <h2 class="mb-4">Education</h2>
+          <div class="flex flex-col gap-4">
+            <div class="glass" style="padding: 20px; border-left: 4px solid var(--accent-primary);">
+              <div class="flex justify-between items-baseline">
+                <h3 style="margin: 0;">B.Tech</h3>
+                <span style="font-size: var(--text-xs); color: var(--text-tertiary);">2022 – 2026</span>
+              </div>
+              <p style="margin: 4px 0; font-weight: 500;">Narayana Engineering College</p>
+              <p style="font-size: var(--text-sm);">CGPA: 8.7</p>
+            </div>
+            <div class="glass" style="padding: 20px; border-left: 4px solid var(--accent-secondary);">
+              <div class="flex justify-between items-baseline">
+                <h3 style="margin: 0;">Intermediate</h3>
+                <span style="font-size: var(--text-xs); color: var(--text-tertiary);">2019 – 2021</span>
+              </div>
+              <p style="margin: 4px 0; font-weight: 500;">Narayana Junior College</p>
+              <p style="font-size: var(--text-sm);">CGPA: 9.58</p>
+            </div>
+            <div class="glass" style="padding: 20px; border-left: 4px solid var(--text-tertiary);">
+              <div class="flex justify-between items-baseline">
+                <h3 style="margin: 0;">SSC</h3>
+                <span style="font-size: var(--text-xs); color: var(--text-tertiary);">2018 – 2019</span>
+              </div>
+              <p style="margin: 4px 0; font-weight: 500;">Gouthami High School</p>
+              <p style="font-size: var(--text-sm);">CGPA: 9.3</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificates Column -->
+        <div class="col-span-6">
+          <h2 class="mb-4">Certificates</h2>
+          <div class="flex flex-col gap-4">
+            <div class="glass" style="padding: 20px; display: flex; align-items: center; gap: 16px;">
+              <div style="background: var(--bg-surface-strong); padding: 10px; border-radius: 8px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 style="margin: 0; font-size: 1rem;">Intro to Data Analytics</h3>
+                <p style="font-size: var(--text-xs);">Simplilearn</p>
+              </div>
+            </div>
+            <div class="glass" style="padding: 20px; display: flex; align-items: center; gap: 16px;">
+              <div style="background: var(--bg-surface-strong); padding: 10px; border-radius: 8px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <polyline points="17 11 19 13 23 9"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 style="margin: 0; font-size: 1rem;">Effective Leadership</h3>
+                <p style="font-size: var(--text-xs);">HP Life</p>
+              </div>
+            </div>
+            <div class="glass" style="padding: 20px; display: flex; align-items: center; gap: 16px;">
+              <div style="background: var(--bg-surface-strong); padding: 10px; border-radius: 8px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 style="margin: 0; font-size: 1rem;">CodeChef Rating: 500</h3>
+                <p style="font-size: var(--text-xs);">Competitive Programming</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mb-4">
+      <h2>Get in Touch</h2>
+      <div class="glass" style="padding: 40px; text-align: center;">
+        <h3 style="margin-bottom: 16px;">Ready to collaborate?</h3>
+        <p style="margin-bottom: 24px; max-width: 60ch; margin-left: auto; margin-right: auto;">
+          I am currently looking for opportunities in Software Engineering and Machine Learning.
+          Feel free to reach out if you have a project or just want to say hi!
+        </p>
+
+        <form action="mailto:malleboenasasidhar@gmail.com" method="post" enctype="text/plain"
+          style="max-width: 400px; margin: 0 auto; text-align: left;">
+          <div style="margin-bottom: 16px;">
+            <label for="name"
+              style="display: block; margin-bottom: 8px; font-size: var(--text-xs); font-weight: 600;">Name</label>
+            <input type="text" id="name" name="name"
+              style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-surface-strong); color: var(--text-primary);"
+              required>
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label for="email"
+              style="display: block; margin-bottom: 8px; font-size: var(--text-xs); font-weight: 600;">Email</label>
+            <input type="email" id="email" name="email"
+              style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-surface-strong); color: var(--text-primary);"
+              required>
+          </div>
+          <div style="margin-bottom: 24px;">
+            <label for="message"
+              style="display: block; margin-bottom: 8px; font-size: var(--text-xs); font-weight: 600;">Message</label>
+            <textarea id="message" name="message" rows="4"
+              style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-surface-strong); color: var(--text-primary);"
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container text-center"
+    style="padding: 40px 0; border-top: 1px solid var(--border-color); margin-top: 40px;">
+    <p>&copy; 2025 Sasidhar Malleboena.</p>
+  </footer>
+
+</body>
+
+</html>

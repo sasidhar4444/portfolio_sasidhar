@@ -1,0 +1,31 @@
+/* Simple, clean portfolio styles */
+:root{
+  --accent:#0b78d1;
+  --bg:#0f1720;
+  --card:#0b1220;
+  --muted:#9aa7b2;
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  margin:0;
+  color:#e6eef6;
+  background: linear-gradient(180deg,var(--bg),#071021 60%);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:900px;margin:0 auto;padding:28px}
+.hero{padding:48px 0;text-align:center}
+.hero h1{margin:0;font-size:2.2rem;letter-spacing:0.5px}
+.sub{color:var(--muted);margin-top:6px}
+.contact{color:var(--muted);margin-top:10px}
+a#linkedin{color:var(--accent);text-decoration:none}
+main{background:transparent;margin-top:18px}
+section{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;margin-bottom:14px}
+h2{margin:0 0 12px 0;color:#d7e9ff}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.project{padding:8px;border-left:3px solid rgba(11,120,209,0.15)}
+ul{margin:0;padding-left:18px}
+footer{font-size:0.85rem;color:var(--muted);padding:18px 0;text-align:center}
+@media (max-width:600px){
+  .hero h1{font-size:1.6rem}
+}
