@@ -4,367 +4,454 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Sasidhar Malleboena - Software & Machine Learning Engineer" />
-  <title>Sasidhar M. — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="scripts/theme-toggle.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Sasidhar Malleboena — Software Developer specializing in Java, Python, Machine Learning, and IoT Systems." />
+  <meta name="author" content="Sasidhar Malleboena" />
+  <title>Sasidhar Malleboena — Software Developer</title>
+
+  <!-- Primary stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Print stylesheet -->
+  <link rel="stylesheet" href="print.css" media="print" />
 </head>
 
 <body>
-  <a href="#main" class="sr-only">Skip to main content</a>
 
-  <!-- Navigation / Theme Toggle -->
-  <nav class="container flex justify-between items-center" style="padding-top: 20px; padding-bottom: 20px;">
-    <div style="font-weight: 700; font-size: 1.2rem;">SM.</div>
-    <button onclick="window.toggleTheme()" class="btn btn-secondary" aria-label="Toggle Dark Mode">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    </button>
-  </nav>
+  <!-- ======================================================
+       NAVIGATION
+  ====================================================== -->
+  <header>
+    <nav class="nav" id="nav" role="navigation" aria-label="Primary navigation">
+      <div class="nav__inner">
+        <a href="#hero" class="nav__logo" aria-label="Home">SM.</a>
 
-  <main id="main" class="container">
+        <!-- Desktop nav -->
+        <ul class="nav__links" role="list">
+          <li><a href="#about"    class="nav__link" data-nav="about">About</a></li>
+          <li><a href="#projects" class="nav__link" data-nav="projects">Projects</a></li>
+          <li><a href="#skills"   class="nav__link" data-nav="skills">Skills</a></li>
+          <li><a href="#contact"  class="nav__link" data-nav="contact">Contact</a></li>
+        </ul>
+        <a href="https://drive.google.com/file/d/1ZcVch6zWrfVyrU8Lox75OlfZIAQ9X54v/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav__cta" aria-label="Download resume PDF">
+          Resume ↓
+        </a>
 
-    <!-- Hero Section -->
-    <section id="hero" class="grid items-center mb-4" style="min-height: 80vh;">
-      <div class="col-span-6">
-        <h1 class="mb-4">Sasidhar Malleboena</h1>
-        <p class="sub" style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 1rem;">Aspiring Software &
-          Machine Learning Engineer</p>
-        <p class="mb-4" style="max-width: 50ch;">
-          Hands-on experience in Python, Java, SQL, Machine Learning, FastAPI, and IoT systems. Strong ability to build
-          real-world automation workflows, ML pipelines, and AI-powered embedded systems.
-        </p>
-        <div class="flex gap-2 mb-4">
-          <a href="/mnt/data/Sasidhar-Resume.pdf" download class="btn btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            Download Resume
-          </a>
-          <a href="mailto:malleboenasasidhar@gmail.com" class="btn btn-secondary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            Contact Me
-          </a>
-        </div>
-        <div class="flex gap-4" style="font-size: var(--text-sm); color: var(--text-secondary);">
-          <span>📍 Hyderabad, India</span>
-          <span>📞 +91 97048 89235</span>
-        </div>
+        <!-- Hamburger for mobile -->
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-      <div class="col-span-6 flex justify-between" style="justify-content: center;">
-        <!-- Portrait/Stats Card -->
-        <div class="glass flex flex-col items-center justify-center text-center"
-          style="width: 320px; padding: 40px 20px;">
-          <div
-            style="width: 120px; height: 120px; border-radius: 50%; background: #ddd; margin-bottom: 20px; overflow: hidden;">
-            <!-- Placeholder Avatar -->
-            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="#999" stroke="none">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-            </svg>
-          </div>
-          <h3 style="margin-bottom: 4px;">Sasidhar M.</h3>
-          <p style="font-size: var(--text-xs); margin-bottom: 24px;">Software Engineer</p>
+    </nav>
 
-          <div class="flex justify-between" style="width: 100%; padding: 0 10px;">
-            <div>
-              <strong style="display: block; font-size: 1.2rem; color: var(--accent-primary);">3+</strong>
-              <span style="font-size: var(--text-xs);">Projects</span>
-            </div>
-            <div>
-              <strong style="display: block; font-size: 1.2rem; color: var(--accent-secondary);">3</strong>
-              <span style="font-size: var(--text-xs);">Langs</span>
-            </div>
-            <div>
-              <strong style="display: block; font-size: 1.2rem; color: var(--text-primary);">8.7</strong>
-              <span style="font-size: var(--text-xs);">CGPA</span>
-            </div>
-          </div>
-        </div>
+    <!-- Mobile nav overlay -->
+    <nav class="nav__mobile" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#about"    class="nav__link" data-mobile-nav>About</a>
+      <a href="#projects" class="nav__link" data-mobile-nav>Projects</a>
+      <a href="#skills"   class="nav__link" data-mobile-nav>Skills</a>
+      <a href="#contact"  class="nav__link" data-mobile-nav>Contact</a>
+      <a href="https://drive.google.com/file/d/1ZcVch6zWrfVyrU8Lox75OlfZIAQ9X54v/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav__cta btn btn-primary">Download Resume ↓</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================================================
+         HERO
+    ====================================================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__bg">
+        <div class="hero__orb"   aria-hidden="true"></div>
+        <div class="hero__orb-2" aria-hidden="true"></div>
       </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="mb-4">
-      <h2>Skills</h2>
-      <div class="grid">
-        <div class="col-span-4 glass" style="padding: 20px;">
-          <h3 style="margin-bottom: 12px; font-size: 1rem;">Programming</h3>
-          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
-            <span class="tag">Python</span>
-            <span class="tag">Java</span>
-            <span class="tag">JavaScript (Node.js)</span>
-            <span class="tag">SQL</span>
+      <div class="container">
+        <div class="hero__content">
+
+          <div class="hero__badge fade-up" style="transition-delay:0s">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Open to full-time opportunities
           </div>
-        </div>
-        <div class="col-span-4 glass" style="padding: 20px;">
-          <h3 style="margin-bottom: 12px; font-size: 1rem;">Machine Learning</h3>
-          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
-            <span class="tag">scikit-learn</span>
-            <span class="tag">pandas</span>
-            <span class="tag">NumPy</span>
-            <span class="tag">OpenCV</span>
-            <span class="tag">Feature Eng.</span>
+
+          <h1 class="hero__title fade-up" id="hero-title" style="transition-delay:0.08s">
+            Sasidhar<br>Malleboena
+          </h1>
+
+          <p class="hero__role fade-up" style="transition-delay:0.14s">
+            Software Developer &nbsp;·&nbsp; Java &amp; Python
+          </p>
+
+          <p class="hero__sub fade-up" style="transition-delay:0.20s">
+            I build real-world systems — from ML-powered fraud detection pipelines
+            to IoT automation with blockchain validation. Focused on solving
+            hard problems with clean code.
+          </p>
+
+          <div class="hero__actions fade-up" style="transition-delay:0.26s">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+              View Projects
+            </a>
+            <a href="https://drive.google.com/file/d/1ZcVch6zWrfVyrU8Lox75OlfZIAQ9X54v/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download Resume
+            </a>
           </div>
-        </div>
-        <div class="col-span-4 glass" style="padding: 20px;">
-          <h3 style="margin-bottom: 12px; font-size: 1rem;">IoT & Embedded</h3>
-          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
-            <span class="tag">ESP8266</span>
-            <span class="tag">MQTT</span>
-            <span class="tag">Sensors</span>
-            <span class="tag">Serial Comm</span>
+
+          <div class="hero__meta fade-up" style="transition-delay:0.32s">
+            <span class="hero__meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              Hyderabad, India
+            </span>
+            <span class="hero__meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92V19a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91A16 16 0 0 0 13.09 15.91l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17l-.08-.08z"/>
+              </svg>
+              +91 97048 89235
+            </span>
+            <span class="hero__meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+              malleboenasasidhar@gmail.com
+            </span>
           </div>
-        </div>
-        <div class="col-span-4 glass" style="padding: 20px;">
-          <h3 style="margin-bottom: 12px; font-size: 1rem;">Web & APIs</h3>
-          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
-            <span class="tag">FastAPI</span>
-            <span class="tag">REST</span>
-            <span class="tag">Webhooks</span>
-            <span class="tag">HTML/CSS</span>
-          </div>
-        </div>
-        <div class="col-span-4 glass" style="padding: 20px;">
-          <h3 style="margin-bottom: 12px; font-size: 1rem;">Cloud & DB</h3>
-          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
-            <span class="tag">MySQL</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Firebase</span>
-            <span class="tag">FCM</span>
-          </div>
-        </div>
-        <div class="col-span-4 glass" style="padding: 20px;">
-          <h3 style="margin-bottom: 12px; font-size: 1rem;">Tools</h3>
-          <div class="flex" style="flex-wrap: wrap; gap: 8px;">
-            <span class="tag">Git</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">Jupyter</span>
-          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="mb-4">
-      <h2>Featured Projects</h2>
-      <div class="grid">
+    <!-- ======================================================
+         PROJECTS
+    ====================================================== -->
+    <section class="section-pad" id="projects" aria-labelledby="projects-title">
+      <div class="container">
 
-        <!-- Project 1 -->
-        <article class="col-span-4 glass flex flex-col justify-between" style="padding: 24px;">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <h3 style="margin: 0; font-size: 1.1rem;">Fraud Detection Pipeline</h3>
-              <span class="tag" style="background: var(--accent-secondary); color: white; border: none;">Deployed</span>
+        <div class="section-header fade-up">
+          <span class="section-label">Work</span>
+          <h2 class="section-title" id="projects-title">Featured Projects</h2>
+          <p class="section-desc">Real systems built to solve real problems — not tutorial replicas.</p>
+        </div>
+
+        <div class="projects-grid stagger" id="projects-grid">
+
+          <!-- PROJECT 1: Fraud Detection -->
+          <article class="card" aria-labelledby="proj1-title">
+            <div class="card__header">
+              <div class="card__icon" aria-hidden="true">🔍</div>
+              <span class="card__badge">Deployed</span>
             </div>
-            <p style="font-size: var(--text-sm); margin-bottom: 16px;">
-              Autonomous pipeline that processes transaction data, extracts features, and flags high-risk activities
-              using ML models.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
+            <h3 class="card__title" id="proj1-title">Fraud Detection Pipeline</h3>
+            <p class="card__desc">Autonomous ML pipeline that processes transaction streams, extracts risk features, and flags anomalies in real time.</p>
+            <ul class="card__bullets">
+              <li>Achieved 94 % F1-score on imbalanced credit-card dataset</li>
+              <li>REST API via FastAPI serving sub-40ms predictions</li>
+              <li>Automated feature engineering and model retraining cycle</li>
+            </ul>
+            <div class="card__tags">
               <span class="tag">Python</span>
+              <span class="tag">scikit-learn</span>
               <span class="tag">FastAPI</span>
-              <span class="tag">ML</span>
+              <span class="tag">pandas</span>
+              <span class="tag">NumPy</span>
             </div>
-          </div>
-          <div class="flex gap-2 mt-4">
-            <a href="#" class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">View Repo</a>
-            <button class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">Case Study</button>
-          </div>
-        </article>
+            <div class="card__links">
+              <a href="#" class="btn btn-ghost btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </article>
 
-        <!-- Project 2 -->
-        <article class="col-span-4 glass flex flex-col justify-between" style="padding: 24px;">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <h3 style="margin: 0; font-size: 1.1rem;">Secure IoT Automation</h3>
-              <span class="tag" style="background: var(--accent-primary); color: white; border: none;">PoC</span>
+          <!-- PROJECT 2: Secure IoT Automation -->
+          <article class="card" aria-labelledby="proj2-title">
+            <div class="card__header">
+              <div class="card__icon" aria-hidden="true">🏠</div>
+              <span class="card__badge amber">PoC</span>
             </div>
-            <p style="font-size: var(--text-sm); margin-bottom: 16px;">
-              AI-enhanced home automation with secure MQTT and blockchain validation for voice/app commands.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tag">IoT</span>
+            <h3 class="card__title" id="proj2-title">Secure IoT Home Automation</h3>
+            <p class="card__desc">AI-enhanced home automation that validates every command through a blockchain smart contract before execution.</p>
+            <ul class="card__bullets">
+              <li>MQTT + Firebase for real-time device control and logging</li>
+              <li>Blockchain smart contract prevents unauthorized commands</li>
+              <li>ESP8266 firmware with voice and app control interfaces</li>
+            </ul>
+            <div class="card__tags">
               <span class="tag">Node.js</span>
-              <span class="tag">Firebase</span>
-            </div>
-          </div>
-          <div class="flex gap-2 mt-4">
-            <a href="#" class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">View Repo</a>
-            <button class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">Case Study</button>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="col-span-4 glass flex flex-col justify-between" style="padding: 24px;">
-          <div>
-            <div class="flex justify-between items-start mb-4">
-              <h3 style="margin: 0; font-size: 1.1rem;">Smart Security System</h3>
-              <span class="tag" style="background: var(--text-tertiary); color: white; border: none;">Hardware</span>
-            </div>
-            <p style="font-size: var(--text-sm); margin-bottom: 16px;">
-              MFA system using Face Recognition, Voice, and PIN to unlock smart locks. Logs attempts to Firebase.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
               <span class="tag">ESP8266</span>
+              <span class="tag">MQTT</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Solidity</span>
+            </div>
+            <div class="card__links">
+              <a href="#" class="btn btn-ghost btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Case Study
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Smart Security System -->
+          <article class="card" aria-labelledby="proj3-title">
+            <div class="card__header">
+              <div class="card__icon" aria-hidden="true">🔐</div>
+              <span class="card__badge indigo">Hardware</span>
+            </div>
+            <h3 class="card__title" id="proj3-title">Smart MFA Security System</h3>
+            <p class="card__desc">Hardware-software security system combining face recognition, voice authentication, and PIN for smart lock access.</p>
+            <ul class="card__bullets">
+              <li>3-factor authentication: Face, Voice, and PIN</li>
+              <li>OpenCV-based real-time face recognition on Raspberry Pi</li>
+              <li>Firebase logging + FCM push alerts on failed attempts</li>
+            </ul>
+            <div class="card__tags">
+              <span class="tag">Python</span>
               <span class="tag">OpenCV</span>
+              <span class="tag">ESP8266</span>
+              <span class="tag">Firebase</span>
               <span class="tag">FCM</span>
             </div>
-          </div>
-          <div class="flex gap-2 mt-4">
-            <a href="#" class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">View Repo</a>
-            <button class="btn btn-secondary" style="padding: 6px 12px; font-size: var(--text-xs);">Case Study</button>
-          </div>
-        </article>
+            <div class="card__links">
+              <a href="#" class="btn btn-ghost btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Case Study
+              </a>
+            </div>
+          </article>
 
+        </div><!-- /projects-grid -->
       </div>
     </section>
 
-    <!-- Experience & Education Section -->
-    <section id="experience" class="mb-4">
-      <div class="grid">
-        <!-- Education Column -->
-        <div class="col-span-6">
-          <h2 class="mb-4">Education</h2>
-          <div class="flex flex-col gap-4">
-            <div class="glass" style="padding: 20px; border-left: 4px solid var(--accent-primary);">
-              <div class="flex justify-between items-baseline">
-                <h3 style="margin: 0;">B.Tech</h3>
-                <span style="font-size: var(--text-xs); color: var(--text-tertiary);">2022 – 2026</span>
-              </div>
-              <p style="margin: 4px 0; font-weight: 500;">Narayana Engineering College</p>
-              <p style="font-size: var(--text-sm);">CGPA: 8.7</p>
-            </div>
-            <div class="glass" style="padding: 20px; border-left: 4px solid var(--accent-secondary);">
-              <div class="flex justify-between items-baseline">
-                <h3 style="margin: 0;">Intermediate</h3>
-                <span style="font-size: var(--text-xs); color: var(--text-tertiary);">2019 – 2021</span>
-              </div>
-              <p style="margin: 4px 0; font-weight: 500;">Narayana Junior College</p>
-              <p style="font-size: var(--text-sm);">CGPA: 9.58</p>
-            </div>
-            <div class="glass" style="padding: 20px; border-left: 4px solid var(--text-tertiary);">
-              <div class="flex justify-between items-baseline">
-                <h3 style="margin: 0;">SSC</h3>
-                <span style="font-size: var(--text-xs); color: var(--text-tertiary);">2018 – 2019</span>
-              </div>
-              <p style="margin: 4px 0; font-weight: 500;">Gouthami High School</p>
-              <p style="font-size: var(--text-sm);">CGPA: 9.3</p>
-            </div>
-          </div>
+    <!-- ======================================================
+         SKILLS
+    ====================================================== -->
+    <section class="section-pad" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+
+        <div class="section-header fade-up">
+          <span class="section-label">Toolkit</span>
+          <h2 class="section-title" id="skills-title">Skills &amp; Technologies</h2>
+          <p class="section-desc">Technologies I use daily to build production systems.</p>
         </div>
 
-        <!-- Certificates Column -->
-        <div class="col-span-6">
-          <h2 class="mb-4">Certificates</h2>
-          <div class="flex flex-col gap-4">
-            <div class="glass" style="padding: 20px; display: flex; align-items: center; gap: 16px;">
-              <div style="background: var(--bg-surface-strong); padding: 10px; border-radius: 8px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <div>
-                <h3 style="margin: 0; font-size: 1rem;">Intro to Data Analytics</h3>
-                <p style="font-size: var(--text-xs);">Simplilearn</p>
-              </div>
-            </div>
-            <div class="glass" style="padding: 20px; display: flex; align-items: center; gap: 16px;">
-              <div style="background: var(--bg-surface-strong); padding: 10px; border-radius: 8px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="8.5" cy="7" r="4"></circle>
-                  <polyline points="17 11 19 13 23 9"></polyline>
-                </svg>
-              </div>
-              <div>
-                <h3 style="margin: 0; font-size: 1rem;">Effective Leadership</h3>
-                <p style="font-size: var(--text-xs);">HP Life</p>
-              </div>
-            </div>
-            <div class="glass" style="padding: 20px; display: flex; align-items: center; gap: 16px;">
-              <div style="background: var(--bg-surface-strong); padding: 10px; border-radius: 8px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
-              <div>
-                <h3 style="margin: 0; font-size: 1rem;">CodeChef Rating: 500</h3>
-                <p style="font-size: var(--text-xs);">Competitive Programming</p>
-              </div>
+        <div class="skills-grid stagger">
+
+          <div class="skills-group">
+            <p class="skills-group__label">Languages</p>
+            <div class="skills-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">HTML / CSS</span>
             </div>
           </div>
+
+          <div class="skills-group">
+            <p class="skills-group__label">ML &amp; Data</p>
+            <div class="skills-tags">
+              <span class="skill-tag">scikit-learn</span>
+              <span class="skill-tag">pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">Feature Engineering</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <p class="skills-group__label">Backend &amp; APIs</p>
+            <div class="skills-tags">
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Webhooks</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <p class="skills-group__label">IoT &amp; Embedded</p>
+            <div class="skills-tags">
+              <span class="skill-tag">ESP8266</span>
+              <span class="skill-tag">MQTT</span>
+              <span class="skill-tag">Serial Comm</span>
+              <span class="skill-tag">Sensors</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <p class="skills-group__label">Databases &amp; Cloud</p>
+            <div class="skills-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">FCM</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <p class="skills-group__label">Tools</p>
+            <div class="skills-tags">
+              <span class="skill-tag">Git &amp; GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Jupyter</span>
+              <span class="skill-tag">Postman</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="mb-4">
-      <h2>Get in Touch</h2>
-      <div class="glass" style="padding: 40px; text-align: center;">
-        <h3 style="margin-bottom: 16px;">Ready to collaborate?</h3>
-        <p style="margin-bottom: 24px; max-width: 60ch; margin-left: auto; margin-right: auto;">
-          I am currently looking for opportunities in Software Engineering and Machine Learning.
-          Feel free to reach out if you have a project or just want to say hi!
-        </p>
+    <!-- ======================================================
+         ABOUT
+    ====================================================== -->
+    <section class="section-pad" id="about" aria-labelledby="about-title">
+      <div class="container">
 
-        <form action="mailto:malleboenasasidhar@gmail.com" method="post" enctype="text/plain"
-          style="max-width: 400px; margin: 0 auto; text-align: left;">
-          <div style="margin-bottom: 16px;">
-            <label for="name"
-              style="display: block; margin-bottom: 8px; font-size: var(--text-xs); font-weight: 600;">Name</label>
-            <input type="text" id="name" name="name"
-              style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-surface-strong); color: var(--text-primary);"
-              required>
+        <div class="section-header fade-up">
+          <span class="section-label">About</span>
+          <h2 class="section-title" id="about-title">Who I Am</h2>
+        </div>
+
+        <div class="about__grid">
+
+          <div class="about__text fade-up">
+            <p>
+              I'm Sasidhar Malleboena, a final-year B.Tech student at
+              Narayana Engineering College, Hyderabad (CGPA 8.7), graduating in 2026.
+              My work sits at the intersection of software engineering, machine learning,
+              and embedded systems.
+            </p>
+            <p>
+              I don't build tutorials — I build things that work.
+              From autonomous ML pipelines to IoT systems secured by blockchain contracts,
+              every project I've shipped has had real-world constraints and measurable outcomes.
+            </p>
+            <p>
+              I'm actively looking for full-time roles in software engineering or
+              machine learning where I can ship meaningful products from day one.
+            </p>
           </div>
-          <div style="margin-bottom: 16px;">
-            <label for="email"
-              style="display: block; margin-bottom: 8px; font-size: var(--text-xs); font-weight: 600;">Email</label>
-            <input type="email" id="email" name="email"
-              style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-surface-strong); color: var(--text-primary);"
-              required>
+
+          <div class="about__stats stagger">
+            <div class="stat-card">
+              <div class="stat-card__num">8.7</div>
+              <div class="stat-card__label">CGPA</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__num">3+</div>
+              <div class="stat-card__label">Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__num">5+</div>
+              <div class="stat-card__label">Languages</div>
+            </div>
           </div>
-          <div style="margin-bottom: 24px;">
-            <label for="message"
-              style="display: block; margin-bottom: 8px; font-size: var(--text-xs); font-weight: 600;">Message</label>
-            <textarea id="message" name="message" rows="4"
-              style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-surface-strong); color: var(--text-primary);"
-              required></textarea>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CONTACT
+    ====================================================== -->
+    <section class="section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__inner">
+
+          <span class="section-label" style="justify-content:center; margin-bottom: 16px;">Contact</span>
+          <h2 class="contact__title fade-up" id="contact-title">Let's Build Something</h2>
+          <p class="contact__sub fade-up">
+            I'm open to full-time roles, freelance work, and interesting collaborations.
+            My inbox is always open — I'll get back within 24 hours.
+          </p>
+
+          <div class="contact__links fade-up">
+
+            <!-- Email -->
+            <a href="mailto:malleboenasasidhar@gmail.com" class="contact-link" aria-label="Send email to Sasidhar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+              Email Me
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/sasidhar4444" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="View GitHub profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+              GitHub
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/sasidhar-m1505/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="View LinkedIn profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-        </form>
+
+          <p class="contact__email-cta fade-up">
+            Or just shoot a mail directly to
+            <a href="mailto:malleboenasasidhar@gmail.com">malleboenasasidhar@gmail.com</a>
+          </p>
+
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="container text-center"
-    style="padding: 40px 0; border-top: 1px solid var(--border-color); margin-top: 40px;">
-    <p>&copy; 2025 Sasidhar Malleboena.</p>
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer>
+    <div class="container">
+      <p>
+        &copy; 2025 <a href="#hero">Sasidhar Malleboena</a>.
+        Built with HTML, CSS &amp; Vanilla JS. &nbsp;·&nbsp;
+        <a href="mailto:malleboenasasidhar@gmail.com">malleboenasasidhar@gmail.com</a>
+      </p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 
 </html>

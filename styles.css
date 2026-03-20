@@ -338,5 +338,3 @@ section {
     /* Start hidden */
     animation: fadeIn 0.6s ease-out forwards;
 }
-
-@import url('print.css');
