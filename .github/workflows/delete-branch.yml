@@ -1,14 +1,30 @@
 name: Delete extra branch
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
+    inputs:
+      branch_name:
+        description: Name of the branch to delete
+        required: false
+        default: copilot/upgrade-portfolio-website
 
 jobs:
   delete-branch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Delete copilot/upgrade-portfolio-website branch
+      - name: Delete branch if it exists
         run: |
-          gh api -X DELETE "repos/${{ github.repository }}/git/refs/heads/copilot/upgrade-portfolio-website" || echo "Branch already deleted or not found"
+          BRANCH="${{ github.event.inputs.branch_name || 'copilot/upgrade-portfolio-website' }}"
+          if gh api "repos/${{ github.repository }}/git/refs/heads/${BRANCH}" > /dev/null 2>&1; then
+            gh api -X DELETE "repos/${{ github.repository }}/git/refs/heads/${BRANCH}"
+            echo "Branch '${BRANCH}' deleted successfully."
+          else
+            echo "Branch '${BRANCH}' does not exist or was already deleted."
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
