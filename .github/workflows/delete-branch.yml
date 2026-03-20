@@ -1,0 +1,14 @@
+name: Delete extra branch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  delete-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete copilot/upgrade-portfolio-website branch
+        run: |
+          gh api -X DELETE "repos/${{ github.repository }}/git/refs/heads/copilot/upgrade-portfolio-website" || echo "Branch already deleted or not found"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
